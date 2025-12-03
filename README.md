@@ -6,4 +6,4 @@
 
 ## Day 2: Gift Shop (Invalid Product IDs)
 
-**Problem:** Find the sum of all unique invalid product IDs ($PP$) that fall within specific numerical ranges provided in the input. An invalid ID is a pattern $P$ repeated twice (e.g., 123123).# Advent-of-Code
+**Problem:** Find the sum of all unique invalid product IDs that fall within specific numerical ranges provided in the input. An invalid ID is a pattern $P$ repeated twice (e.g., 123123).
