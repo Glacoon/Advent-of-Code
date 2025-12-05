@@ -89,6 +89,33 @@ def solve_puzzle(invalid_ids, ranges):
                 
     return total_sum
 
+# --- Part 2 ---
+
+def generate_invalid_ids_part_2(max_id_value):
+    invalid_ids_set = set()
+    max_total_length = len(str(max_id_value))
+    
+    for repetition_count in range(2, max_total_length + 1):
+        
+        max_length_pattern = max_total_length // repetition_count
+        
+        for pattern_length in range(1, max_length_pattern + 1):
+            
+            start_pattern_value = 10 ** (pattern_length - 1)
+            end_pattern_value = 10 ** pattern_length
+            
+            for base_Pattern_Value in range(start_pattern_value, end_pattern_value):
+                
+                id_String = str(base_Pattern_Value) * repetition_count
+                invalid_ID_Value = int(id_String)
+                
+                if invalid_ID_Value > max_id_value:
+                    break
+                    
+                invalid_ids_set.add(invalid_ID_Value)
+                
+    return invalid_ids_set
+
 
 # --- Main ---
 
